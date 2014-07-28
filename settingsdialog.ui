@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>435</width>
+    <height>358</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="generalTab">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="onSuccessGroup">
+         <property name="title">
+          <string>On successful puush</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="playNotificationSoundCheckBox">
+            <property name="text">
+             <string>Play a notification sound</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="saveLocalCopyCheckBox">
+            <property name="text">
+             <string>Save a local copy of image</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="copyLinkToClipboardCheckBox">
+            <property name="text">
+             <string>Copy link to clipboard</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLineEdit" name="savePathLineEdit"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="savePathBrowseButton">
+              <property name="maximumSize">
+               <size>
+                <width>32</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="openInBrowserCheckBox">
+            <property name="text">
+             <string>Open link in browser</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="trayIconBehaviorGroup">
+         <property name="title">
+          <string>Tray Icon Behavior</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="onDoubleClickLabel">
+            <property name="text">
+             <string>On double-click...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="showSettingsRadioButton">
+            <property name="text">
+             <string>Show settings dialog</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="beginCaptureModeRadioButton">
+            <property name="text">
+             <string>Begin screen capture mode</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="openFileDialogRadioButton">
+            <property name="text">
+             <string>Open upload file dialog</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="keyBindingsTab">
+      <attribute name="title">
+       <string>Key Bindings</string>
+      </attribute>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="captureDesktopLabel">
+         <property name="text">
+          <string>Capture desktop</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QKeySequenceEdit" name="captureDesktopKeySequenceEdit"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="captureCurrentWindowLabel">
+         <property name="text">
+          <string>Capture current window</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QKeySequenceEdit" name="captureCurrentWindowKeySequenceEdit"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="captureAreaLabel">
+         <property name="text">
+          <string>Capture area</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QKeySequenceEdit" name="captureAreaKeySequenceEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="uploadClipboardLabel">
+         <property name="text">
+          <string>Upload clipboard</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QKeySequenceEdit" name="uploadClipboardKeySequenceEdit"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="uploadFileLabel">
+         <property name="text">
+          <string>Upload file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QKeySequenceEdit" name="uploadFileKeySequenceEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="accountTab">
+      <attribute name="title">
+       <string>Account</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="accountDetailsGroup">
+         <property name="title">
+          <string>Account Details</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QFormLayout" name="accountDetailsLayout">
+            <property name="labelAlignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="loggedInAsLabel">
+              <property name="text">
+               <string>Logged in as:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="loggedInAs">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="apiKeyLabel">
+              <property name="text">
+               <string>API key:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="apiKey">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="accountButtonsLayout">
+            <item>
+             <widget class="QPushButton" name="myAccountButton">
+              <property name="text">
+               <string>My Account</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="logoutButton">
+              <property name="text">
+               <string>Logout</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
