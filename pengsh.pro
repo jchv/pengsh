@@ -10,3 +10,5 @@ packagesExist(x11) {
     DEFINES += USE_X11
 }
 
+target.path = /usr/bin/
+INSTALLS += target
